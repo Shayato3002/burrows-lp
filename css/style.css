@@ -1,0 +1,400 @@
+/* 基本リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9fb;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ナビゲーション */
+.navbar {
+    background: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.btn-black {
+    background: #030213;
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ヒーローセクション */
+.hero {
+    height: 600px;
+    background-image: url('../images/so-ra.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 0.4が暗さの度合い（0〜1） */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-white-cta {
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-icon {
+    margin-top: 60px;
+    font-size: 1.5rem;
+}
+
+/* 共通タイトル */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* 選ばれる理由 */
+.reasons {
+    padding: 100px 0;
+    background-color: #030213;
+    color: #fff;
+}
+
+.reasons .section-subtitle {
+    color: #aaa;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+}
+
+.reason-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.reason-tag {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.reason-desc {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* 事業内容セクションのスタイル */
+.services {
+    padding: 100px 0;
+    background-color: #f4f4f4;
+}
+
+.services .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.services .section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* お問い合わせセクション */
+.contact {
+    padding: 100px 0;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+    margin-top: 50px;
+    width: 100%; 
+}
+
+.contact-info-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    width: 100%; 
+}
+
+.contact-info-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-info-box h3 span {
+    font-weight: normal;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+.info-item .label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-item .value {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info-item .sub {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* フォーム */
+.contact-form-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+}
+
+.form-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eee;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.btn-submit {
+    background: #030213;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* フッター */
+.footer {
+    background: #030213;
+    color: #fff;
+    padding: 80px 0 40px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-right p {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+/* 黒枠を角の取れたデザインに変更 */
+.selected-link {
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px; /* 角を丸くする */
+}
